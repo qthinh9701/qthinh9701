@@ -1,0 +1,99 @@
+// --- CONTACT CSS ---
+.contact-page {
+  position: relative;
+  @include xs {
+    .contact-page__bg {
+      padding-top: 150% !important;
+    }
+    .contact-form-wrapper {
+      max-width: 470px !important;
+      .contact-form__text {
+        display: initial !important;
+        .left {
+          text-align: center;
+          max-width: fit-content !important;
+        }
+      }
+      .contact-form {
+        .contact-text__des {
+          margin: 0 auto;
+          text-align: center;
+        }
+        form {
+          display: initial !important;
+        }
+      }
+    }
+  }
+  .contact-page__bg {
+    background-image: url(../../../img/pages/Contact-img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-top: 50%;
+    width: 100%;
+    filter: brightness(42%);
+    -webkit-filter: brightness(42%);
+    -moz-filter: brightness(42%);
+  }
+  .contact-form-wrapper {
+    max-width: 770px;
+    @include mid();
+    .contact-form__text {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        max-width: 370px;
+        margin-right: 30px;
+      }
+      .right {
+        .top {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .contact-form {
+      padding-top: 30px;
+      .title {
+        width: 300px;
+      }
+      form {
+        display: flex;
+        justify-content: space-between;
+        input[type="text"] {
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          background: none;
+          outline: none;
+          width: 100%;
+          border-bottom-color: $yellow-cl;
+          color: $white-cl;
+        }
+        label {
+          font-family: Arial, sans-serif;
+          font-size: 12px;
+          line-height: 82px;
+          color: $white-cl;
+          letter-spacing: 1px;
+        }
+        .left {
+          width: 370px;
+        }
+        .right {
+          width: 370px;
+          textarea {
+            background: none;
+            border-color: $yellow-cl;
+            width: 100%;
+            outline: none;
+            color: $white-cl;
+            height: 106px;
+          }
+        }
+      }
+    }
+  }
+}

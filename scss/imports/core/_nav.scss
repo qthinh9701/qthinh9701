@@ -1,0 +1,49 @@
+// css navigator (Menu)
+nav {
+  @include xs {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    display: none;
+    height: var(--heightNav);
+    background: $blue-bold-cl;
+    @include transition($t);
+    .container {
+      min-width: 1060px;
+      height: 100%;
+      .nav__list {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 85px 0 85px;
+        .nav__list-item {
+          .nav__list-item-link {
+            text-decoration: none;
+            color: $white-cl;
+            text-transform: uppercase;
+            font-family: arial, sans-serif;
+            font-size: 11px;
+            line-height: 40px;
+            font-weight: bold;
+            padding: 14px 0;
+            &.btn-main {
+              &::after {
+                background: $white-cl;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.active {
+      display: block;
+      @include transition($t);
+    }
+  }
+}

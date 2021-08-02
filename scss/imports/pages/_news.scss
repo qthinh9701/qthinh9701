@@ -1,0 +1,43 @@
+// --- NEWS CSS ---
+.banner-newspage {
+  .banner_text {
+    margin: 0 auto;
+    left: 0;
+    top: 279px;
+  }
+}
+
+.news-page {
+  z-index: 100;
+  position: relative;
+  margin-top: -180px;
+  .container {
+    padding: 0 30px;
+    .section-title {
+      margin-bottom: 110px;
+      color: $white-cl;
+    }
+    .pd {
+      padding-top: 0;
+      z-index: 90;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background: #fff;
+        height: 2px;
+        position: absolute;
+        top: -60px;
+      }
+    }
+    .project-list {
+      .news-list {
+        display: initial !important;
+        .news-list-item {
+        }
+      }
+    }
+    
+  }
+}

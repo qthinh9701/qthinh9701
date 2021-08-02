@@ -1,0 +1,103 @@
+// --- PROJECT CSS ----
+.project-page {
+  padding-top: 170px;
+  padding-bottom: 80px;
+  @include xs {
+    padding-top: 50px !important;
+    .container {
+      .project {
+        align-items: flex-start !important;
+        padding-bottom: 0 !important;
+        .project__text {
+          .section-des {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    padding: 0 30px;
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 60px;
+      .project__text {
+        width: 454px;
+      }
+      .project__select {
+        position: relative;
+        span {
+          background: $black-bg-cl;
+          color: $white-cl;
+          padding: 10px 20px 10px 44px;
+          display: block;
+          @include transition($t);
+          &:hover {
+            background: #705b32;
+          }
+        }
+        .project__select-current {
+          width: 200px;
+          cursor: pointer;
+          span {
+            display: flex;
+            justify-content: space-between;
+            i {
+              transform: rotate(90deg);
+            }
+          }
+        }
+        .project__select-dropdown {
+          width: 200px;
+          position: absolute;
+          display: none;
+          a {
+            background: $black-bg-cl;
+            color: $white-cl;
+            padding: 10px 20px 10px 44px;
+            text-decoration: none;
+            display: block;
+            @include transition($t);
+            &:hover {
+              background: #705b32;
+              @include transition($t);
+            }
+          }
+          // &.active {
+          //     display: block;
+          // }
+        }
+      }
+    }
+    .project-list {
+      .project-list__top {
+        &.pj-page {
+          grid-template-columns: repeat(1, 1fr);
+          .project-list__top-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 28px;
+          }
+        }
+        .project-list__top-list {
+          .project-list__top-list-item {
+            @include xs {
+              .text-box {
+                .item-des {
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  word-break: break-word;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

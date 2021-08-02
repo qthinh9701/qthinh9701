@@ -1,0 +1,113 @@
+// css footer
+footer {
+  width: 100%;
+  background: $blue-bold-cl;
+  margin-top: -390px;
+  padding-top: 600px;
+  padding-bottom: 240px;
+  @include xs {
+    padding-bottom: 600px !important;
+  }
+  .container {
+    text-align: center;
+    position: relative;
+    @include xs {
+      padding: 0 40px;
+      position: relative;
+      .logo-ft {
+        &::before,
+        &::after {
+          width: 200px !important;
+        }
+      }
+      .logo-right {
+        top: -40% !important;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .time {
+        width: 290px;
+      }
+      .address {
+        width: 440px;
+      }
+      p {
+        font-size: 18px !important;
+        line-height: 32px !important;
+        letter-spacing: 0.5px;
+        margin: 0 auto 40px;
+      }
+      .back-to-top {
+        &::before {
+          right: 170% !important;
+          top: -154% !important;
+        }
+      }
+    }
+    .logo-right {
+      position: absolute;
+      right: -5%;
+      top: -180%;
+      z-index: 0;
+    }
+    .logo-ft {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 430px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        left: 0;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 430px;
+        height: 2px;
+        background: $yellow-cl;
+        display: block;
+        right: 0;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      color: $white-cl;
+      text-transform: uppercase;
+      font-family: arial, sans-serif;
+      font-size: 11px;
+      line-height: 26px;
+    }
+    .back-to-top {
+      font-size: 10px;
+      transform: rotate(90deg);
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      bottom: -100%;
+      &::before {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 130px;
+        position: absolute;
+        background: $yellow-cl;
+        transform: rotate(90deg);
+        right: 230%;
+        top: -200%;
+      }
+    }
+  }
+  &.product-ft {
+    padding: 100px 0 240px 0;
+    margin-top: 0;
+  }
+}

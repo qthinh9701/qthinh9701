@@ -1,0 +1,139 @@
+// ---ABOUT CSS ---
+.abouts-page {
+  padding: 180px 0 120px 0;
+
+  .about-top {
+    .about-top__text {
+      text-align: center;
+      margin-bottom: 36px;
+      .des {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+    .about-top__img {
+      margin-bottom: 72px;
+    }
+    .about-top__detail {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 46px;
+      letter-spacing: 1px;
+      max-width: 770px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  @include xs {
+    .separate {
+      height: 136px !important;
+    }
+    .about-center {
+      display: initial !important;
+      .about-center__text {
+        width: fit-content !important;
+        text-align: center;
+        .des {
+          br + br {
+            display: none;
+          }
+        }
+      }
+      .about-center__img {
+        padding-top: 0 !important;
+      }
+    }
+    .about-bottom {
+      .about-bottom__text {
+        .des {
+          width: fit-content !important;
+        }
+      }
+    }
+  }
+  .separate {
+    height: 236px;
+    width: 1px;
+    background: $black-cl;
+    margin: 0 auto;
+  }
+  .about-center {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    .about-center__text {
+      width: 360px;
+      .des {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 46px;
+        letter-spacing: 1px;
+      }
+    }
+    .about-center__img {
+      padding-top: 116px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  .about-bottom {
+    padding-top: 164px;
+    margin-bottom: 50px;
+
+    .about-bottom__text {
+      text-align: center;
+      margin-bottom: 46px;
+      .des {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        width: 700px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+      .by {
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 26px;
+        letter-spacing: 1px;
+        span {
+          display: block;
+          text-transform: none;
+        }
+      }
+    }
+    .about-bottom__img {
+      max-width: 570px;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 88px;
+      .banner-bottom {
+        height: 100%;
+      }
+      .signatur {
+        position: absolute;
+        right: -5%;
+        bottom: -13%;
+      }
+    }
+    .about-bottom__detail {
+      max-width: 570px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  .contact-us {
+    .contact-us__buttons {
+      text-align: center;
+    }
+  }
+}
